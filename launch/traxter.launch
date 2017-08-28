@@ -1,0 +1,14 @@
+<launch>
+
+<node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan">
+
+  <param name="scan_height" value="10"/>
+  <param name="output_frame_id" value="/kinect_depth"/>
+  <remap from="image" to="/camera/depth/image_raw"/>
+  <remap from="camera_info" to="/camera/depth/camera_info"/>
+</node>
+
+<!--<node name="traxster_pub" pkg="traxster" type="key_publisher.py" />
+<node name="traxster_pub_sub" pkg="traxster" type="keys_to_twist.py" />-->
+
+</launch>
